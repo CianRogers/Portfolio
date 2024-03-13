@@ -32,10 +32,12 @@ if investment_bond_investment.casefold() == "investment":
 if investment_bond_investment.casefold() == "bond":
 # # if the user inputts bond calculate monthly bond repayment with inputted values
     value_house = int(input("Please enter the present value of the property "))
+# Prompt the user to imput their interest rate 
     interest_rate_bond = int(input("Please enter your interest rate "))
     interest_rate_bond_divided_100 = interest_rate_bond / 100
     interest_rate_bond_divided_100_12 = interest_rate_bond_divided_100 / 12
     months_repayment = int(input("Please enter how many months you plan on taking to repay the bond "))
+# Calculate the monthly repayment valvue for the user based upon their inputs
     bond_repayment = (interest_rate_bond_divided_100_12 * value_house)/(1- (1 + interest_rate_bond_divided_100_12)**(-months_repayment))
     print("The ammount you will have to repay each month is", bond_repayment) 
            
